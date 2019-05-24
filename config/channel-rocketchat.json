@@ -1,0 +1,8 @@
+{
+    "ROCKETCHAT_USER": "botpress",
+    "ROCKETCHAT_PASSWORD": "botpress",
+    "ROCKETCHAT_URL": "http://192.168.182.44:3000",
+    "ROCKETCHAT_USE_SSL": "false",
+    "ROCKETCHAT_ROOM": "GENERAL",
+    "scope": ""
+}

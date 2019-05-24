@@ -1,0 +1,18 @@
+{
+  "version": "0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "nodes": [
+    {
+      "id": "d3a7a4ce34",
+      "name": "entry",
+      "onEnter": [
+        "setUserVariable {\"name\":\"teste\",\"value\":\"\",\"expiry\":\"never\"}"
+      ],
+      "onReceive": [
+        "say #!builtin_text-Gf5ZpR"
+      ],
+      "next": []
+    }
+  ]
+}

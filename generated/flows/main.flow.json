@@ -1,0 +1,62 @@
+{
+  "version": "0.1",
+  "catchAll": {
+    "onReceive": [
+      ""
+    ],
+    "next": [
+      {
+        "condition": "event.nlu.intent.is('forget')",
+        "node": "forget-my-name"
+      }
+    ]
+  },
+  "startNode": "entry",
+  "nodes": [
+    {
+      "id": "a54a82eb7c",
+      "name": "entry",
+      "onEnter": [
+        "getUserVariable {\"name\":\"nickname\",\"output\":\"$r\"}"
+      ],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "state.$r !== null",
+          "node": "Nome"
+        },
+        {
+          "condition": "true",
+          "node": "Telefone"
+        }
+      ]
+    },
+    {
+      "id": "7a54b58bb8",
+      "name": "Telefone",
+      "next": [],
+      "onEnter": [
+        "setUserVariable {\"name\":\"tel\",\"value\":\"\",\"expiry\":\"never\"}"
+      ],
+      "onReceive": [
+        "say #!builtin_text-im4hxO"
+      ]
+    },
+    {
+      "id": "5fc397ecd0",
+      "name": "Nome",
+      "next": [
+        {
+          "condition": "true",
+          "node": "entry"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-z0J9qh"
+      ],
+      "onReceive": [
+        "say #!builtin_text-Gf5ZpR"
+      ]
+    }
+  ]
+}
